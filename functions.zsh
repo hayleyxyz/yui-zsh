@@ -1,3 +1,7 @@
+# DO NOT INVOKE THIS FILE DIRECTLY
+# Include it in other scripts
+# e.g source functions.zsh
+
 RED='\e[31m'
 CYAN='\e[36m'
 GREEN='\e[32m'
@@ -12,6 +16,10 @@ function success {
     printf "\r[${GREEN}SUCCESS${NC}] $1\n"
 }
 
+function warning {
+    printf "\r[${YELLOW}WARNING${NC}] $1\n"
+}
+
 function error {
   printf "\r[${RED}ERROR${NC}] $1\n"
 }
@@ -22,6 +30,10 @@ function inprog {
 
 function strip_leading_trailing_colon {
     return $(sed -e 's/^:*//' -e 's/:*$//' <<< "$1")
+}
+
+function ltrim() {
+    sed -e 's/^$2//' <<< '$1'
 }
 
 function append_path {

@@ -5,3 +5,5 @@ append_path ~/Projects/vdexExtractor/bin
 append_path ~/Projects/virtualenv_androguard/bin
 append_path ~/Projects/jadx/build/jadx/bin
 append_path ~/Projects/compact_dex_converterd/bin
+append_path /Applications/CMake.app/Contents/bin
+append_path ~/Projects/repo
